@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
 
- #lista de frutas 
 frutas = {
     "manzana": "apple",
     "plátano": "banana",
@@ -35,6 +34,17 @@ frutas = {
     "chayote": "chayote"
 }
 
+def traducir():
+    palabra = entrada.get().lower().strip()
+
+    if palabra == "":
+        messagebox.showerror("Error", "Escribe una fruta")
+        return
+
+    if palabra in frutas:
+        resultado.config(text=f"Inglés: {frutas[palabra]}")
+    else:
+        resultado.config(text="Fruta no encontrada")
 
 ventana = tk.Tk()
 ventana.title("Traductor de Frutas")
@@ -51,27 +61,7 @@ tk.Label(
 entrada = tk.Entry(ventana, width=30, font=("Arial", 12))
 entrada.pack(pady=10)
 
-resultado = tk.Label(
-    ventana,
-    text="",
-    font=("Arial", 14),
-    fg="green"
-)
-resultado.pack(pady=10)
-
-def traducir():
-    palabra = entrada.get().lower().strip()
-
-    if palabra == "":
-        messagebox.showerror("Error", "Escribe una fruta")
-        return
-
-    if palabra in frutas:
-        resultado.config(text=f"Inglés: {frutas[palabra]}")
-    else:
-        resultado.config(text="Fruta no encontrada")
-
-  tk.Button(
+tk.Button(
     ventana,
     text="Traducir",
     command=traducir,
@@ -79,5 +69,8 @@ def traducir():
     bg="green",
     fg="white"
 ).pack(pady=10)
+
+resultado = tk.Label(ventana, text="", font=("Arial", 14), fg="green")
+resultado.pack(pady=10)
 
 ventana.mainloop()
