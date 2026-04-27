@@ -32,7 +32,7 @@ frutas = {
     "arándano rojo": "cranberry",
     "tamarindo": "tamarind",
     "chayote": "chayote",
-    "Axel" : "Axon"
+    "axel" : "axon"
 }
 
 def traducir():
