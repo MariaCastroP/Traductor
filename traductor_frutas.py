@@ -72,5 +72,4 @@ tk.Button(
 
 resultado = tk.Label(ventana, text="", font=("Arial", 14), fg="green")
 resultado.pack(pady=10)
-
 ventana.mainloop()
