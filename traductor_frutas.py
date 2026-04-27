@@ -31,7 +31,8 @@ frutas = {
     "maracuyá": "passion fruit",
     "arándano rojo": "cranberry",
     "tamarindo": "tamarind",
-    "chayote": "chayote"
+    "chayote": "chayote",
+    "Axel" : "Axon"
 }
 
 def traducir():
